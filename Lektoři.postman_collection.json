@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c460a4af-afb7-4868-9f8a-cd6da76d9496",
+		"name": "Lektoři",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25952415"
+	},
+	"item": [
+		{
+			"name": "Lektori all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/czechitas/lektori/all",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"czechitas",
+						"lektori",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lektori random",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/czechitas/lektori/random",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"czechitas",
+						"lektori",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lektori id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/czechitas/lektori/3",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"czechitas",
+						"lektori",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lektori name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ quote: string}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/czechitas/lektori/:name",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"czechitas",
+						"lektori",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

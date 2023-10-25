@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "509f537d-5338-4ec4-8783-483304ada02c",
+		"name": "Ukol- Veronika Obrtelová",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25952415"
+	},
+	"item": [
+		{
+			"name": "Add - Záporná čísla",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=-3&b=-4",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "-3"
+						},
+						{
+							"key": "b",
+							"value": "-4"
+						}
+					]
+				},
+				"description": "Tento request odesílá dva záporné parametry a očekává se, že se vrátí správný součet čísel. Test je úspěšný protože vrací správný výsledek."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Mix čísel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=3&b=-4",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "3"
+						},
+						{
+							"key": "b",
+							"value": "-4"
+						}
+					]
+				},
+				"description": "Tento request odesílá jeden kladný parametr a jeden záporný parametr a očekává se, že se vrátí správný součet čísel. Test je úspěšný protože vrací správný výsledek."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Neplatné vstupní hodnoty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=-3&b=msdksfgmkdf",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "-3"
+						},
+						{
+							"key": "b",
+							"value": "msdksfgmkdf"
+						}
+					]
+				},
+				"description": "Testujeme zda aplikace správně zachytí a vyřeší neplatné vstupní hodnoty. Test vrací správně bad request, protože jsem nezadala čísla, ale neplatné hodnoty."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Sčítání výsledků několikrát po sobě",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=3&b=3",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "3"
+						},
+						{
+							"key": "b",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Testujeme zda aplikace zvládne pokud budeme výsledek několikrát opakovat zasebou. Napřiklad budeme ho několikrát sčítat. Test vyšel správně i po několikati zavolání zasebou."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Nulové hodnoty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=0&b=0",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "0"
+						},
+						{
+							"key": "b",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Tento request odesílá nulové hodnoty, očekává se,že se vrátí nula. Test je OK."
+			},
+			"response": []
+		},
+		{
+			"name": "Add- Kladná čísla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=3&b=4",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "3"
+						},
+						{
+							"key": "b",
+							"value": "4"
+						}
+					]
+				},
+				"description": "Tento request odesílá dva kladné parametry a očekává se, že se vrátí správný součet čísel. Test je úspěšný vrátil sečtené správně hodnoty."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Desetinné místo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=abc&b=3",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "abc"
+						},
+						{
+							"key": "b",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Tento request odesílá hodnoty, které mají desetinná čísla, a očekává se ,že se vrátí správný součet čísel. Test je uspěšný. Vrátil správně sečtené hodnoty,ale pokud bychom zadaly hodnotu napsanou 3, 15 a 4,85 tak hodnoty nesečte."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Iracionální čísla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=√2&b=π",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "√2"
+						},
+						{
+							"key": "b",
+							"value": "π"
+						}
+					]
+				},
+				"description": "Tento request odesílá iracionální čísla. Očekává se ,že vyjde špatný request. Vyšel bad request, nemáme zadané správné vstupní hodnoty."
+			},
+			"response": []
+		},
+		{
+			"name": "Add - Chybějící parametr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=3&b",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "3"
+						},
+						{
+							"key": "b",
+							"value": null
+						}
+					]
+				},
+				"description": "Zadám jen jeden parametr, očekávám ,že k očekávanému výsledku budu potřebovat více paramaterů. Očekávaný výsledek bude 3. Tady vyjde error protože nemám zadané oba paramatry."
+			},
+			"response": []
+		},
+		{
+			"name": "další",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=\"abc\"&b=3",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "\"abc\""
+						},
+						{
+							"key": "b",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Očekává se ,že se vrátí 3abc. Vrátilo se ,že mám zadanou špatnou hodnotu."
+			},
+			"response": []
+		},
+		{
+			"name": "+",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=+&b=4",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "+"
+						},
+						{
+							"key": "b",
+							"value": "4"
+						}
+					]
+				},
+				"description": "Očekáváme ,že výsledek bude 4 a výsledek se vrátil se správný součet"
+			},
+			"response": []
+		},
+		{
+			"name": "-",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=-&b=4",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "-"
+						},
+						{
+							"key": "b",
+							"value": "4"
+						}
+					]
+				},
+				"description": "Očekáváme ,že výsledek bude - 4 a výsledek se vrátíl jako bad request"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://czechitas-api.vercel.app/api/math/add?a=\\\"abc\\\"&b=3",
+					"protocol": "https",
+					"host": [
+						"czechitas-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"math",
+						"add"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "\\\"abc\\\""
+						},
+						{
+							"key": "b",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://czechitas-api.vercel.app/api/math/add?a=\\\"abc\\\"&b=3",
+							"protocol": "https",
+							"host": [
+								"czechitas-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"math",
+								"add"
+							],
+							"query": [
+								{
+									"key": "a",
+									"value": "\\\"abc\\\""
+								},
+								{
+									"key": "b",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

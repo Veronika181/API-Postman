@@ -1,2 +1,2 @@
 # API-Postman
-Projekt API v Postmanu je zaměřen na testování a efektivní správu rozhraní API pomocí platformy Postman. Cílem projektu je umožnit testování scénářů, kontrolu a monitorování API endpointů s důrazem na přehlednost a snadnou správu.
+The API Project in Postman focuses on testing and efficiently managing API interfaces using the Postman platform. The project aims to enable testing of scenarios, control, and monitoring of API endpoints with an emphasis on clarity and easy management.

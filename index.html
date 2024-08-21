@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Project Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .link {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My API Project</h1>
+    <p>This is a demonstration of my API project using Postman.</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>API Documentation</h2>
+        <p>You can find the documentation here:</p>
+        <ul>
+            <li><a href="dokumentace.md" class="link" download>Download Postman Collection</a></li>
+            <li><a href="https://www.postman.com/your-workspace/collection/your-collection-id" class="link" target="_blank">View Postman Collection Online</a></li>
+        </ul>
+
+        <h3>Postman Collection: Lektoři</h3>
+        <h4>1. Lektori all</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/czechitas/lektori/all
+        Description: Retrieve all lecturers.
+        </pre>
+
+        <h4>2. Lektori random</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/czechitas/lektori/random
+        Description: Retrieve a random lecturer.
+        </pre>
+
+        <h4>3. Lektori id</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/czechitas/lektori/3
+        Description: Retrieve lecturer with a specific ID.
+        </pre>
+
+        <h4>4. Lektori name</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/czechitas/lektori/:name
+        Description: Retrieve lecturer by name.
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>Additional API Documentation</h2>
+
+        <h3>Postman Collection: Ukol - Veronika Obrtelová</h3>
+        <h4>1. Add - Záporná čísla</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=-3&b=-4
+        Description: Adds two negative numbers. Expects correct sum.
+        </pre>
+
+        <h4>2. Add - Mix čísel</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=3&b=-4
+        Description: Adds one positive and one negative number. Expects correct sum.
+        </pre>
+
+        <h4>3. Add - Neplatné vstupní hodnoty</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=-3&b=msdksfgmkdf
+        Description: Tests handling of invalid input values. Expects bad request.
+        </pre>
+
+        <h4>4. Add - Sčítání výsledků několikrát po sobě</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=3&b=3
+        Description: Tests addition with repeated results. Expects correct sum after multiple calls.
+        </pre>
+
+        <h4>5. Add - Nulové hodnoty</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=0&b=0
+        Description: Adds two zeros. Expects zero.
+        </pre>
+
+        <h4>6. Add - Kladná čísla</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=3&b=4
+        Description: Adds two positive numbers. Expects correct sum.
+        </pre>
+
+        <h4>7. Add - Desetinné místo</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=abc&b=3
+        Description: Tests decimal numbers and non-numeric input. Expects correct result or error.
+        </pre>
+
+        <h4>8. Add - Iracionální čísla</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=√2&b=π
+        Description: Tests irrational numbers. Expects bad request.
+        </pre>
+
+        <h4>9. Add - Chybějící parametr</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=3&b
+        Description: Tests missing parameter. Expects error.
+        </pre>
+
+        <h4>10. Add - další</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=\"abc\"&b=3
+        Description: Tests with incorrect parameter values. Expects error.
+        </pre>
+
+        <h4>11. Add - Plus sign</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=+&b=4
+        Description: Tests addition with plus sign. Expects correct result.
+        </pre>
+
+        <h4>12. Add - Minus sign</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=-&b=4
+        Description: Tests addition with minus sign. Expects bad request.
+        </pre>
+
+        <h4>13. New Request</h4>
+        <pre>
+        GET https://czechitas-api.vercel.app/api/math/add?a=\"abc\"&b=3
+        Description: Tests escaped characters. Expects error.
+        </pre>
+    </div>
+
+</div>
+
+</body>
+</html>
+
